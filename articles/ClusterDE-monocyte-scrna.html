@@ -83,7 +83,7 @@ HealthBioinformatics IDP, University of California, Los
 Angeles<br><a class="author_email" href="mailto:#"></a><a href="mailto:dongyuansong@ucla.edu" class="email">dongyuansong@ucla.edu</a>
       </address>
                   
-            <h4 data-toc-skip class="date">27 August 2026</h4>
+            <h4 data-toc-skip class="date">20 October 2026</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/SONGDONGYUAN1994/ClusterDE/blob/HEAD/vignettes/ClusterDE-monocyte-scrna.Rmd" class="external-link"><code>vignettes/ClusterDE-monocyte-scrna.Rmd</code></a></small>
       <div class="d-none name"><code>ClusterDE-monocyte-scrna.Rmd</code></div>
@@ -190,21 +190,21 @@ analysis, the cell type label is usually unknown.</p>
 <span><span class="co">#&gt; Warning: The default method for RunUMAP has changed from calling Python UMAP via reticulate to the R-native UWOT using the cosine metric</span></span>
 <span><span class="co">#&gt; To use Python UMAP via reticulate, set umap.method to 'umap-learn' and metric to 'correlation'</span></span>
 <span><span class="co">#&gt; This message will be shown once per session</span></span>
-<span><span class="co">#&gt; 15:27:52 UMAP embedding parameters a = 0.9922 b = 1.112</span></span>
-<span><span class="co">#&gt; 15:27:52 Read 3222 rows and found 10 numeric columns</span></span>
-<span><span class="co">#&gt; 15:27:52 Using Annoy for neighbor search, n_neighbors = 30</span></span>
-<span><span class="co">#&gt; 15:27:52 Building Annoy index with metric = cosine, n_trees = 50</span></span>
+<span><span class="co">#&gt; 15:30:57 UMAP embedding parameters a = 0.9922 b = 1.112</span></span>
+<span><span class="co">#&gt; 15:30:57 Read 3222 rows and found 10 numeric columns</span></span>
+<span><span class="co">#&gt; 15:30:57 Using Annoy for neighbor search, n_neighbors = 30</span></span>
+<span><span class="co">#&gt; 15:30:57 Building Annoy index with metric = cosine, n_trees = 50</span></span>
 <span><span class="co">#&gt; 0%   10   20   30   40   50   60   70   80   90   100%</span></span>
 <span><span class="co">#&gt; [----|----|----|----|----|----|----|----|----|----|</span></span>
 <span><span class="co">#&gt; **************************************************|</span></span>
-<span><span class="co">#&gt; 15:27:52 Writing NN index file to temp file /loc/scratch/2560765/RtmpYGLA1U/filedb6f53dab9eb3</span></span>
-<span><span class="co">#&gt; 15:27:52 Searching Annoy index using 1 thread, search_k = 3000</span></span>
-<span><span class="co">#&gt; 15:27:53 Annoy recall = 100%</span></span>
-<span><span class="co">#&gt; 15:27:53 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30</span></span>
-<span><span class="co">#&gt; 15:27:54 Initializing from normalized Laplacian + noise (using RSpectra)</span></span>
-<span><span class="co">#&gt; 15:27:54 Commencing optimization for 500 epochs, with 126438 positive edges</span></span>
-<span><span class="co">#&gt; 15:27:54 Using rng type: pcg</span></span>
-<span><span class="co">#&gt; 15:27:57 Optimization finished</span></span>
+<span><span class="co">#&gt; 15:30:57 Writing NN index file to temp file /tmp/RtmprSdj3k/file28098c2fc8148f</span></span>
+<span><span class="co">#&gt; 15:30:57 Searching Annoy index using 1 thread, search_k = 3000</span></span>
+<span><span class="co">#&gt; 15:30:58 Annoy recall = 100%</span></span>
+<span><span class="co">#&gt; 15:30:58 Commencing smooth kNN distance calibration using 1 thread with target n_neighbors = 30</span></span>
+<span><span class="co">#&gt; 15:30:59 Initializing from normalized Laplacian + noise (using RSpectra)</span></span>
+<span><span class="co">#&gt; 15:30:59 Commencing optimization for 500 epochs, with 126438 positive edges</span></span>
+<span><span class="co">#&gt; 15:30:59 Using rng type: pcg</span></span>
+<span><span class="co">#&gt; 15:31:02 Optimization finished</span></span>
 <span><span class="va">p1</span> <span class="op">&lt;-</span> <span class="fu">Seurat</span><span class="fu">::</span><span class="fu"><a href="https://satijalab.org/seurat/reference/DimPlot.html" class="external-link">DimPlot</a></span><span class="op">(</span><span class="va">pbmc</span>, reduction <span class="op">=</span> <span class="st">"umap"</span>, label <span class="op">=</span> <span class="cn">T</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">ggplot2</span><span class="fu">::</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html" class="external-link">ggtitle</a></span><span class="op">(</span><span class="st">"Clustering result"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu">Seurat</span><span class="fu">::</span><span class="fu"><a href="https://satijalab.org/seurat/reference/SeuratTheme.html" class="external-link">NoLegend</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -382,7 +382,7 @@ types</strong>.</p>
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">#&gt; R version 4.5.1 (2025-06-13)</span></span>
 <span><span class="co">#&gt; Platform: x86_64-pc-linux-gnu</span></span>
-<span><span class="co">#&gt; Running under: Ubuntu 24.04.4 LTS</span></span>
+<span><span class="co">#&gt; Running under: Ubuntu 24.04.5 LTS</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Matrix products: default</span></span>
 <span><span class="co">#&gt; BLAS/LAPACK: FlexiBLAS OPENBLAS;  LAPACK version 3.12.0</span></span>

@@ -73,7 +73,7 @@
 <div class="page-header"><h1 id="clusterde">ClusterDE<a class="anchor" aria-label="anchor" href="#clusterde"></a>
 </h1></div>
 <hr>
-<p>The R package <strong>ClusterDE</strong> is a post-clustering DE method for controlling the false discovery rate (FDR) of identified between cell-type DE genes regardless of clustering quality. The core idea of ClusterDE is to generate real-data-based synthetic null data with only one cell type, as contrast to the real data, for evaluating the whole procedure of clustering followed by a DE test. <span style="color:blue"> <strong>Detailed tutorials that illustrate various functionalities of ClusterDE are available at this <a href="https://songdongyuan1994.github.io/ClusterDE/index.html">website</a></strong></span>. The following illustration figure summarizes the usage of ClusterDE:</p>
+<p>The R package <strong>ClusterDE</strong> is a post-clustering DE method for controlling the false discovery rate (FDR) of identified between cell-type DE genes regardless of clustering quality. The core idea of ClusterDE is to generate real-data-based synthetic null data with only one cell type, as contrast to the real data, for evaluating the whole procedure of clustering followed by a DE test. <span style="color:blue"> <strong>Detailed tutorials that illustrate various functionalities of ClusterDE are available at this <a href="https://jsb-ucla.github.io/ClusterDE/index.html">website</a></strong></span>. The following illustration figure summarizes the usage of ClusterDE:</p>
 <p><img src="reference/figures/ClusterDE_schematic.png" width="600" alt="ClusterDE schematic"></p>
 <p><strong>The motivation and application of ClusterDE</strong>: In Seurat function <code>findMarkers</code>, the authors pointed out: <em>“p-values should be interpreted cautiously, as the genes used for clustering are the same genes tested for differential expression.”</em> This is the “double-dipping” issue. If your clustering results are inaccurate and since the clustering has used your expression data already, the discovered DE genes may not represent the discrete cell type separation, but other variation in your data (e.g., cell cycle, total UMI, or other variation you are not clear. These are still biological variation but do not define discrete status).</p>
 <p>ClusterDE aims at correcting the double-dipping issue for comparing two dubious clusters, which you are not sure if they are two discrete cell types or just an artifact of your clustering algorithm based on conventional DE analysis. ClusterDE controls the false discoveries in DE and prioritizes the true cell type markers.</p>
@@ -86,21 +86,21 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">require</a></span><span class="op">(</span><span class="st"><a href="https://devtools.r-lib.org/" class="external-link">"devtools"</a></span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"devtools"</span><span class="op">)</span></span>
-<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"SONGDONGYUAN1994/ClusterDE"</span><span class="op">)</span></span></code></pre></div>
+<span><span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"JSB-UCLA/ClusterDE"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level1">
 <h1 id="tutorials">Tutorials<a name="tutorials"></a>
 <a class="anchor" aria-label="anchor" href="#tutorials"></a>
 </h1>
-<p>For all detailed tutorials, please check the <a href="https://songdongyuan1994.github.io/ClusterDE/index.html">website</a>.</p>
+<p>For all detailed tutorials, please check the <a href="https://jsb-ucla.github.io/ClusterDE/index.html">website</a>.</p>
 <ul>
-<li><a href="https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-monocyte-scrna.html">Perform ClusterDE on a monocyte scRNA dataset</a></li>
-<li><a href="https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-pure-cellline.html">Perform ClusterDE on a pure cell line dataset</a></li>
-<li><a href="https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-spatial-onedomain.html">Perform ClusterDE on a spatial dataset (one domain)</a></li>
-<li><a href="https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-spatial-twodomains.html">Perform ClusterDE on a spatial dataset (two domains)</a></li>
-<li><a href="https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-scmultiome.html">Perform ClusterDE on a single-cell multiome dataset</a></li>
-<li><a href="https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-bulk-microarray.html">Perform ClusterDE on a bulk microarray dataset</a></li>
-<li><a href="https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-microbiome.html">Perform ClusterDE on a microbiome dataset</a></li>
+<li><a href="https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-monocyte-scrna.html">Perform ClusterDE on a monocyte scRNA dataset</a></li>
+<li><a href="https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-pure-cellline.html">Perform ClusterDE on a pure cell line dataset</a></li>
+<li><a href="https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-spatial-onedomain.html">Perform ClusterDE on a spatial dataset (one domain)</a></li>
+<li><a href="https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-spatial-twodomains.html">Perform ClusterDE on a spatial dataset (two domains)</a></li>
+<li><a href="https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-scmultiome.html">Perform ClusterDE on a single-cell multiome dataset</a></li>
+<li><a href="https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-bulk-microarray.html">Perform ClusterDE on a bulk microarray dataset</a></li>
+<li><a href="https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-microbiome.html">Perform ClusterDE on a microbiome dataset</a></li>
 </ul>
 </div>
 <div class="section level1">
@@ -124,19 +124,19 @@
 <span>  other_covariates <span class="op">=</span> <span class="cn">NULL</span>,</span>
 <span>  seed <span class="op">=</span> <span class="fl">123</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>See <a href="https://songdongyuan1994.github.io/ClusterDE/reference/constructNull.html">API Reference</a> for parameter settings of <code><a href="reference/constructNull.html">constructNull()</a></code>.</p>
+<p>See <a href="https://jsb-ucla.github.io/ClusterDE/reference/constructNull.html">API Reference</a> for parameter settings of <code><a href="reference/constructNull.html">constructNull()</a></code>.</p>
 <p>The output of <code><a href="reference/constructNull.html">constructNull()</a></code> is the new gene by cell matrix.</p>
 <p>The following figure briefly describes how ClusterDE generates the synthetic null data:</p>
 <p><img src="reference/figures/ClusterDE_supp_null_generation.png" width="800"></p>
 <p>After obtaining the synthetic null data, perform standard preprocessing and clustering pipeline to get DE p-values.</p>
-<p>Finally, we compare the p-values from the null and p-values from the target data (real data) by <code><a href="reference/callDE.html">callDE()</a></code>. See <a href="https://songdongyuan1994.github.io/ClusterDE/reference/callDE.html">API Reference</a> for parameter settings of <code><a href="reference/callDE.html">callDE()</a></code>.</p>
+<p>Finally, we compare the p-values from the null and p-values from the target data (real data) by <code><a href="reference/callDE.html">callDE()</a></code>. See <a href="https://jsb-ucla.github.io/ClusterDE/reference/callDE.html">API Reference</a> for parameter settings of <code><a href="reference/callDE.html">callDE()</a></code>.</p>
 <p>The output of <code><a href="reference/callDE.html">callDE()</a></code> is a list of DE genes, ordered by record from most significant to less significant.</p>
 </div>
 <div class="section level1">
 <h1 id="contact">Contact<a name="contact"></a>
 <a class="anchor" aria-label="anchor" href="#contact"></a>
 </h1>
-<p>Any questions or suggestions on <code>ClusterDE</code> are welcomed! Please report it on <a href="https://github.com/SONGDONGYUAN1994/ClusterDE/issues" class="external-link">issues</a>, or contact Dongyuan Song (<a href="mailto:dongyuansong@ucla.edu" class="email">dongyuansong@ucla.edu</a>).</p>
+<p>Any questions or suggestions on <code>ClusterDE</code> are welcomed! Please report it on <a href="https://github.com/JSB-UCLA/ClusterDE/issues" class="external-link">issues</a>, or contact Dongyuan Song (<a href="mailto:dongyuansong@ucla.edu" class="email">dongyuansong@ucla.edu</a>).</p>
 </div>
 <div class="section level1">
 <h1 id="other-methods-for-double-dipping-problem">Other methods for double dipping problem<a class="anchor" aria-label="anchor" href="#other-methods-for-double-dipping-problem"></a>
