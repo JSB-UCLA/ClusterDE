@@ -7,7 +7,7 @@ between cell-type DE genes regardless of clustering quality.
 The core idea of ClusterDE is to generate real-data-based synthetic null data with only one cell type, as contrast to
 the real data, for evaluating the whole procedure of clustering followed by a DE test.
 <span style="color:blue"> **Detailed tutorials that illustrate various functionalities of ClusterDE are available at
-this [website](https://songdongyuan1994.github.io/ClusterDE/index.html)**</span>.
+this [website](https://jsb-ucla.github.io/ClusterDE/index.html)**</span>.
 The following illustration figure summarizes the usage of ClusterDE:
 
 <img src="man/figures/ClusterDE_schematic.png" width="600" alt="ClusterDE schematic" />
@@ -32,20 +32,20 @@ To install the development version from GitHub, please run:
 ```r
 if (!require("devtools", quietly = TRUE))
   install.packages("devtools")
-devtools::install_github("SONGDONGYUAN1994/ClusterDE")
+devtools::install_github("JSB-UCLA/ClusterDE")
 ```
 
 # Tutorials<a name="tutorials"></a>
 
-For all detailed tutorials, please check the [website](https://songdongyuan1994.github.io/ClusterDE/index.html).
+For all detailed tutorials, please check the [website](https://jsb-ucla.github.io/ClusterDE/index.html).
 
-- [Perform ClusterDE on a monocyte scRNA dataset](https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-monocyte-scrna.html)
-- [Perform ClusterDE on a pure cell line dataset](https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-pure-cellline.html)
-- [Perform ClusterDE on a spatial dataset (one domain)](https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-spatial-onedomain.html)
-- [Perform ClusterDE on a spatial dataset (two domains)](https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-spatial-twodomains.html)
-- [Perform ClusterDE on a single-cell multiome dataset](https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-scmultiome.html)
-- [Perform ClusterDE on a bulk microarray dataset](https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-bulk-microarray.html)
-- [Perform ClusterDE on a microbiome dataset](https://songdongyuan1994.github.io/ClusterDE/articles/ClusterDE-microbiome.html)
+- [Perform ClusterDE on a monocyte scRNA dataset](https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-monocyte-scrna.html)
+- [Perform ClusterDE on a pure cell line dataset](https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-pure-cellline.html)
+- [Perform ClusterDE on a spatial dataset (one domain)](https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-spatial-onedomain.html)
+- [Perform ClusterDE on a spatial dataset (two domains)](https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-spatial-twodomains.html)
+- [Perform ClusterDE on a single-cell multiome dataset](https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-scmultiome.html)
+- [Perform ClusterDE on a bulk microarray dataset](https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-bulk-microarray.html)
+- [Perform ClusterDE on a microbiome dataset](https://jsb-ucla.github.io/ClusterDE/articles/ClusterDE-microbiome.html)
 
 # API Reference
 
@@ -71,7 +71,7 @@ null_data <- ClusterDE::constructNull(
 )
 ```
 
-See [API Reference](https://songdongyuan1994.github.io/ClusterDE/reference/constructNull.html) for parameter settings of `constructNull()`.
+See [API Reference](https://jsb-ucla.github.io/ClusterDE/reference/constructNull.html) for parameter settings of `constructNull()`.
 
 The output of `constructNull()` is the new gene by cell matrix.
 
@@ -82,14 +82,14 @@ The following figure briefly describes how ClusterDE generates the synthetic nul
 After obtaining the synthetic null data, perform standard preprocessing and clustering pipeline to get DE p-values.
 
 Finally, we compare the p-values from the null and p-values from the target data (real data) by `callDE()`.
-See [API Reference](https://songdongyuan1994.github.io/ClusterDE/reference/callDE.html) for parameter settings of `callDE()`.
+See [API Reference](https://jsb-ucla.github.io/ClusterDE/reference/callDE.html) for parameter settings of `callDE()`.
 
 The output of `callDE()` is a list of DE genes, ordered by record from most significant to less significant.
 
 # Contact<a name="contact"></a>
 
 Any questions or suggestions on `ClusterDE` are welcomed! Please report it
-on [issues](https://github.com/SONGDONGYUAN1994/ClusterDE/issues), or contact Dongyuan
+on [issues](https://github.com/JSB-UCLA/ClusterDE/issues), or contact Dongyuan
 Song ([dongyuansong\@ucla.edu](mailto:dongyuansong@ucla.edu){.email}).
 
 # Other methods for double dipping problem
